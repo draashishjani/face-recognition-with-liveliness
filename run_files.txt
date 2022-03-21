@@ -1,0 +1,31 @@
+Face Recognition And Detection
+
+Step 1 Built Face Dataset
+-------------------------------
+python build_face_dataset.py --cascade face_detection_model/haarcascade_frontalface_default.xml --output dataset/persion_name
+
+Step 2 Built Liveness Dataset
+------------------------------------
+python gather_examples.py --input videos/real.mp4 --output dataset_live/real --detector face_detection_model --skip 1
+
+python gather_examples.py --input videos/fake.mp4 --output dataset_live/fake --detector face_detection_model --skip 4
+
+Step 3 Run Embeddings
+-------------------------------
+python extract_embeddings.py --dataset dataset\ --embeddings output/embeddings.pickle\ --detector face_detection_model\ --embedding-model openface_nn4.small2.v1.t7
+
+Step 4 Train Liveness Model
+-----------------------------------
+python train_liveness.py --dataset dataset_live --model liveness.model --label output/label.pickle
+
+Step 5 Train Recognition Model
+---------------------------------------
+python train_model.py 
+
+Step 6 Face Detection And Recognition Live
+------------------------------------------------------
+python Face_recognition_liveness.py
+
+Confidence level more then 75%
+tolerance level 2%
+model trained on  587 images

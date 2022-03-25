@@ -1,4 +1,4 @@
-#  Face Detection And Recognition 
+#  Face Recognition with Liveliness
 
 The Software module is designed and developed to be applied for Real time mode of detection and recognition of face for example in door bell/door lock access using deep learning and OpenCV together (with scikit-learn libraries)
 

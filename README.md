@@ -115,8 +115,7 @@ Face_Recognition_liveness.py: Step #6 Our demonstration script will fire up your
 * [Spyder](https://www.spyder-ide.org/) - Spyder is a powerful scientific environment(IDE) 
 
 ## Authors
+* **Dr. Ashish Jani**
+* **Mahek Vasoya**
+* **Sagar Parmar**
 
-* **Mahek Vasoya** -  Face Detection And Recognition 
-* **Jay Thakkar**
-* **Poojan Sutariya**
-* **Chandresh Maniya**
